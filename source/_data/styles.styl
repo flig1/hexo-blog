@@ -1,0 +1,238 @@
+// 二次元风格自定义样式
+
+// 页面背景渐变
+body {
+  background: linear-gradient(135deg, #f5f7fa 0%, #e4ebf5 50%, #d1e0f5 100%);
+  background-attachment: fixed;
+  color: #333;
+}
+
+// 深色模式下的背景
+.dark-theme, body.dark-theme {
+  background: linear-gradient(135deg, #0f0f23 0%, #16162e 50%, #1a1a3a 100%);
+  color: #e0e0e0;
+}
+
+// 卡片样式优化
+.post-block {
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.95);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.post-block:hover {
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+  transform: translateY(-2px);
+}
+
+// 深色模式下的卡片
+.dark-theme .post-block {
+  background: rgba(30, 30, 60, 0.95);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+.dark-theme .post-block:hover {
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.45);
+}
+
+// 标题颜色调整
+.site-title, .post-title {
+  color: #ff6b81;
+  text-shadow: 0 2px 4px rgba(255, 107, 129, 0.3);
+}
+
+// 深色模式下的标题
+.dark-theme .site-title, .dark-theme .post-title {
+  color: #ff8597;
+  text-shadow: 0 2px 4px rgba(255, 133, 151, 0.4);
+}
+
+// 链接颜色
+a {
+  color: #4a90e2;
+  transition: all 0.3s ease;
+}
+
+a:hover {
+  color: #ff6b81;
+  text-decoration: none;
+}
+
+// 深色模式下的链接
+.dark-theme a {
+  color: #5ea1f3;
+}
+
+.dark-theme a:hover {
+  color: #ff8597;
+}
+
+// 侧边栏样式
+.sidebar {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+// 深色模式下的侧边栏
+.dark-theme .sidebar {
+  background: rgba(30, 30, 60, 0.95);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+// 按钮样式
+.btn {
+  border-radius: 20px;
+  background: linear-gradient(135deg, #4a90e2, #357abd);
+  border: none;
+  transition: all 0.3s ease;
+  color: white;
+}
+
+.btn:hover {
+  background: linear-gradient(135deg, #357abd, #2a639a);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 15px rgba(74, 144, 226, 0.4);
+}
+
+// 代码块样式
+.codeblock {
+  border-radius: 8px;
+  background: rgba(245, 245, 245, 0.95);
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+}
+
+// 深色模式下的代码块
+.dark-theme .codeblock {
+  background: rgba(20, 20, 40, 0.95);
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.3);
+}
+
+// 滚动条样式
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.05);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(135deg, #4a90e2, #ff6b81);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(135deg, #357abd, #ff526b);
+}
+
+// 深色模式下的滚动条
+.dark-theme ::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+// 小图标主题切换按钮样式
+.theme-toggle.theme-toggle-icon {
+  background: transparent;
+  color: #4a90e2;
+  padding: 5px;
+  margin: 0 5px;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+  box-shadow: none;
+}
+
+.theme-toggle.theme-toggle-icon:hover {
+  background: rgba(74, 144, 226, 0.1);
+  color: #ff6b81;
+  transform: scale(1.2);
+  box-shadow: none;
+}
+
+// 深色模式下的主题切换按钮
+.dark-theme .theme-toggle.theme-toggle-icon {
+  color: #5ea1f3;
+}
+
+.dark-theme .theme-toggle.theme-toggle-icon:hover {
+  background: rgba(94, 161, 243, 0.1);
+  color: #ff8597;
+}
+
+// Live2D角色容器样式调整
+#l2dcanvas {
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+}
+
+// 深色模式下的Live2D角色
+.dark-theme #l2dcanvas {
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.35);
+}
+
+// 页面加载动画
+.pace {
+  .pace-progress {
+    background: linear-gradient(90deg, #4a90e2, #ff6b81);
+    box-shadow: 0 0 10px rgba(74, 144, 226, 0.5), 0 0 5px rgba(74, 144, 226, 0.8);
+  }
+}
+
+// 深色模式下的文本颜色
+.dark-theme body {
+  color: #e0e0e0;
+}
+
+.dark-theme h1, .dark-theme h2, .dark-theme h3, .dark-theme h4, .dark-theme h5, .dark-theme h6 {
+  color: #ffffff;
+}
+
+// 深色模式下的边框颜色
+.dark-theme .post-block {
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.dark-theme .sidebar {
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+// 深色模式下的引用样式
+.dark-theme blockquote {
+  background: rgba(94, 161, 243, 0.1);
+  border-left: 4px solid #5ea1f3;
+  color: #c0c0c0;
+}
+
+// 深色模式下的列表样式
+.dark-theme ul, .dark-theme ol {
+  color: #e0e0e0;
+}
+
+// 深色模式下的代码颜色
+.dark-theme code {
+  background: rgba(255, 255, 255, 0.1);
+  color: #ff8597;
+}
+
+// 深色模式下的表格样式
+.dark-theme table {
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+.dark-theme th {
+  background: rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+}
+
+.dark-theme td {
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+// 深色模式下的分隔线样式
+.dark-theme hr {
+  border-color: rgba(255, 255, 255, 0.2);
+}

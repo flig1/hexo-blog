@@ -99,6 +99,23 @@ ignore:
 ## Themes: https://hexo.io/themes/
 theme: next
 
+# Live2D配置
+live2d:
+  enable: true
+  pluginRootPath: live2dw/
+  pluginJsPath: lib/
+  pluginModelPath: assets/
+  tagMode: false
+  debug: false
+  model:
+    use: live2d-widget-model-hijiki
+  display:
+    position: right
+    width: 150
+    height: 300
+  mobile:
+    show: true
+
 # Deployment
 ## Docs: https://hexo.io/docs/one-command-deployment
 deploy:

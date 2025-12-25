@@ -1,0 +1,58 @@
+<!-- 主题切换按钮 -->
+{% if theme.lightdark.enable %}
+<li class="menu-item menu-item-theme-toggle">
+  <a role="button" class="theme-toggle" id="theme-toggle" title="切换主题">
+    {%- if theme.menu_settings.icons %}<i class="fa fa-moon-o fa-fw"></i>{% endif %}<span class="theme-toggle-text">夜间模式</span>
+  </a>
+</li>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const themeToggle = document.getElementById('theme-toggle');
+    if (!themeToggle) return;
+    
+    const themeToggleIcon = themeToggle.querySelector('i');
+    const themeToggleText = themeToggle.querySelector('.theme-toggle-text');
+    
+    // 初始化主题
+    function initTheme() {
+      const savedTheme = localStorage.getItem('theme');
+      const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      
+      if (savedTheme === 'dark' || (!savedTheme && prefersDark)) {
+        document.documentElement.classList.add('dark-theme');
+        if (themeToggleIcon) themeToggleIcon.className = 'fa fa-sun-o fa-fw';
+        if (themeToggleText) themeToggleText.textContent = '日间模式';
+      } else {
+        document.documentElement.classList.remove('dark-theme');
+        if (themeToggleIcon) themeToggleIcon.className = 'fa fa-moon-o fa-fw';
+        if (themeToggleText) themeToggleText.textContent = '夜间模式';
+      }
+    }
+    
+    // 切换主题
+    function toggleTheme() {
+      const isDark = document.documentElement.classList.toggle('dark-theme');
+      
+      if (isDark) {
+        localStorage.setItem('theme', 'dark');
+        if (themeToggleIcon) themeToggleIcon.className = 'fa fa-sun-o fa-fw';
+        if (themeToggleText) themeToggleText.textContent = '日间模式';
+      } else {
+        localStorage.setItem('theme', 'light');
+        if (themeToggleIcon) themeToggleIcon.className = 'fa fa-moon-o fa-fw';
+        if (themeToggleText) themeToggleText.textContent = '夜间模式';
+      }
+    }
+    
+    // 监听系统主题变化
+    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', initTheme);
+    
+    // 添加点击事件
+    themeToggle.addEventListener('click', toggleTheme);
+    
+    // 初始化
+    initTheme();
+  });
+</script>
+{% endif %}

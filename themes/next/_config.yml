@@ -26,10 +26,10 @@ custom_file_path:
   #postBodyStart: source/_data/post-body-start.njk
   #postBodyEnd: source/_data/post-body-end.njk
   #footer: source/_data/footer.njk
-  #bodyEnd: source/_data/body-end.njk
+  bodyEnd: source/_data/body-end.njk
   #variable: source/_data/variables.styl
   #mixin: source/_data/mixins.styl
-  #style: source/_data/styles.styl
+  style: source/_data/styles.styl
 
 
 # ---------------------------------------------------------------
@@ -37,17 +37,17 @@ custom_file_path:
 # ---------------------------------------------------------------
 
 # Schemes
-scheme: Muse
+#scheme: Muse
 #scheme: Mist
 #scheme: Pisces
-#scheme: Gemini
+scheme: Gemini
 
 # Dark Mode
 darkmode: false
 
 # Light-Dark Mode
 lightdark:
-  enable: false
+  enable: true
   # Add @supports (color: light-dark(red, red)) check
   check_supports: true
 
@@ -637,16 +637,19 @@ quicklink:
 motion:
   enable: true
   async: false
-  duration: 200
+  duration: 300
   transition:
     # All available transition variants: https://theme-next.js.org/animate/
-    menu_item: fadeInDown
-    post_block: fadeIn
+    menu_item: bounceInDown
+    post_block: zoomIn
     post_header: fadeInDown
-    post_body: fadeInDown
+    post_body: fadeInUp
     coll_header: fadeInLeft
     # Only for Pisces | Gemini.
-    sidebar: fadeInUp
+    sidebar: slideInRight
+    # Add more animations for other elements
+    footer: fadeInUp
+    header: fadeInDown
 
 # Progress bar in the top during page loading.
 # For more information: https://github.com/CodeByZach/pace
@@ -667,6 +670,15 @@ canvas_ribbon:
   size: 300 # The width of the ribbon
   alpha: 0.6 # The transparency of the ribbon
   zIndex: -1 # The display level of the ribbon
+
+# Canvas Nest
+# For more information: https://github.com/hustcc/canvas-nest.js
+canvas_nest:
+  enable: true
+  color: "0,0,255" # RGB values, use ',' to separate
+  opacity: 0.5 # The opacity of line: 0~1
+  zIndex: -1 # z-index property of the background
+  count: 99 # The number of lines
 
 
 # ---------------------------------------------------------------
