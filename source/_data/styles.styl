@@ -1,88 +1,55 @@
-// 二次元风格自定义样式
+// 二次元风格自定义样式 - 默认黑色主题
 
-// 页面背景渐变
+// 页面背景渐变 - 深色主题
 body {
-  background: linear-gradient(135deg, #f5f7fa 0%, #e4ebf5 50%, #d1e0f5 100%);
-  background-attachment: fixed;
-  color: #333;
-}
-
-// 深色模式下的背景
-.dark-theme, body.dark-theme {
   background: linear-gradient(135deg, #0f0f23 0%, #16162e 50%, #1a1a3a 100%);
+  background-attachment: fixed;
   color: #e0e0e0;
+  overflow-x: auto; /* 允许水平滚动 */
+  scroll-behavior: smooth; /* 平滑滚动 */
 }
 
-// 卡片样式优化
+// 卡片样式优化 - 深色主题
 .post-block {
   border-radius: 12px;
-  background: rgba(255, 255, 255, 0.95);
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  background: rgba(30, 30, 60, 0.95);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
   transition: all 0.3s ease;
+  border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .post-block:hover {
-  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.45);
   transform: translateY(-2px);
 }
 
-// 深色模式下的卡片
-.dark-theme .post-block {
-  background: rgba(30, 30, 60, 0.95);
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
-}
-
-.dark-theme .post-block:hover {
-  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.45);
-}
-
-// 标题颜色调整
+// 标题颜色调整 - 深色主题
 .site-title, .post-title {
-  color: #ff6b81;
-  text-shadow: 0 2px 4px rgba(255, 107, 129, 0.3);
-}
-
-// 深色模式下的标题
-.dark-theme .site-title, .dark-theme .post-title {
   color: #ff8597;
   text-shadow: 0 2px 4px rgba(255, 133, 151, 0.4);
 }
 
-// 链接颜色
+// 链接颜色 - 深色主题
 a {
-  color: #4a90e2;
+  color: #5ea1f3;
   transition: all 0.3s ease;
 }
 
 a:hover {
-  color: #ff6b81;
+  color: #ff8597;
   text-decoration: none;
 }
 
-// 深色模式下的链接
-.dark-theme a {
-  color: #5ea1f3;
-}
-
-.dark-theme a:hover {
-  color: #ff8597;
-}
-
-// 侧边栏样式
+// 侧边栏样式 - 深色主题
 .sidebar {
-  background: rgba(255, 255, 255, 0.95);
+  background: rgba(30, 30, 60, 0.95);
   backdrop-filter: blur(10px);
   border-radius: 12px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-}
-
-// 深色模式下的侧边栏
-.dark-theme .sidebar {
-  background: rgba(30, 30, 60, 0.95);
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-// 按钮样式
+// 按钮样式 - 深色主题
 .btn {
   border-radius: 20px;
   background: linear-gradient(135deg, #4a90e2, #357abd);
@@ -97,27 +64,21 @@ a:hover {
   box-shadow: 0 4px 15px rgba(74, 144, 226, 0.4);
 }
 
-// 代码块样式
+// 代码块样式 - 深色主题
 .codeblock {
   border-radius: 8px;
-  background: rgba(245, 245, 245, 0.95);
-  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
-}
-
-// 深色模式下的代码块
-.dark-theme .codeblock {
   background: rgba(20, 20, 40, 0.95);
   box-shadow: 0 2px 15px rgba(0, 0, 0, 0.3);
 }
 
-// 滚动条样式
+// 滚动条样式 - 深色主题
 ::-webkit-scrollbar {
   width: 8px;
   height: 8px;
 }
 
 ::-webkit-scrollbar-track {
-  background: rgba(0, 0, 0, 0.05);
+  background: rgba(255, 255, 255, 0.05);
   border-radius: 4px;
 }
 
@@ -130,51 +91,13 @@ a:hover {
   background: linear-gradient(135deg, #357abd, #ff526b);
 }
 
-// 深色模式下的滚动条
-.dark-theme ::-webkit-scrollbar-track {
-  background: rgba(255, 255, 255, 0.05);
-}
-
-// 小图标主题切换按钮样式
-.theme-toggle.theme-toggle-icon {
-  background: transparent;
-  color: #4a90e2;
-  padding: 5px;
-  margin: 0 5px;
-  border-radius: 50%;
-  transition: all 0.3s ease;
-  box-shadow: none;
-}
-
-.theme-toggle.theme-toggle-icon:hover {
-  background: rgba(74, 144, 226, 0.1);
-  color: #ff6b81;
-  transform: scale(1.2);
-  box-shadow: none;
-}
-
-// 深色模式下的主题切换按钮
-.dark-theme .theme-toggle.theme-toggle-icon {
-  color: #5ea1f3;
-}
-
-.dark-theme .theme-toggle.theme-toggle-icon:hover {
-  background: rgba(94, 161, 243, 0.1);
-  color: #ff8597;
-}
-
-// Live2D角色容器样式调整
+// Live2D角色容器样式调整 - 深色主题
 #l2dcanvas {
   border-radius: 12px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
-}
-
-// 深色模式下的Live2D角色
-.dark-theme #l2dcanvas {
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.35);
 }
 
-// 页面加载动画
+// 页面加载动画 - 深色主题
 .pace {
   .pace-progress {
     background: linear-gradient(90deg, #4a90e2, #ff6b81);
@@ -182,57 +105,136 @@ a:hover {
   }
 }
 
-// 深色模式下的文本颜色
-.dark-theme body {
-  color: #e0e0e0;
-}
-
-.dark-theme h1, .dark-theme h2, .dark-theme h3, .dark-theme h4, .dark-theme h5, .dark-theme h6 {
+// 文本颜色优化 - 深色主题
+h1, h2, h3, h4, h5, h6 {
   color: #ffffff;
 }
 
-// 深色模式下的边框颜色
-.dark-theme .post-block {
-  border: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-.dark-theme .sidebar {
-  border: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-// 深色模式下的引用样式
-.dark-theme blockquote {
+// 引用样式 - 深色主题
+blockquote {
   background: rgba(94, 161, 243, 0.1);
   border-left: 4px solid #5ea1f3;
   color: #c0c0c0;
 }
 
-// 深色模式下的列表样式
-.dark-theme ul, .dark-theme ol {
+// 列表样式 - 深色主题
+ul, ol {
   color: #e0e0e0;
 }
 
-// 深色模式下的代码颜色
-.dark-theme code {
+// 代码颜色 - 深色主题
+code {
   background: rgba(255, 255, 255, 0.1);
   color: #ff8597;
 }
 
-// 深色模式下的表格样式
-.dark-theme table {
+// 表格样式 - 深色主题
+table {
   border-color: rgba(255, 255, 255, 0.2);
 }
 
-.dark-theme th {
+th {
   background: rgba(255, 255, 255, 0.1);
   color: #ffffff;
 }
 
-.dark-theme td {
+td {
   border-color: rgba(255, 255, 255, 0.1);
 }
 
-// 深色模式下的分隔线样式
-.dark-theme hr {
+// 分隔线样式 - 深色主题
+hr {
   border-color: rgba(255, 255, 255, 0.2);
+}
+
+// 页面内容容器 - 允许左右滑动
+.container {
+  width: 100%;
+  max-width: 100%;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+// 主内容区域 - 适配左右滑动
+.main-inner {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  transition: transform 0.3s ease;
+}
+
+// 鼠标点击特效样式
+.click-effect {
+  position: fixed;
+  pointer-events: none;
+  z-index: 9999;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255, 107, 129, 0.8) 0%, rgba(74, 144, 226, 0.8) 100%);
+  animation: click-animation 0.6s ease-out forwards;
+}
+
+@keyframes click-animation {
+  0% {
+    transform: scale(0);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(3);
+    opacity: 0;
+  }
+}
+
+// 左右滑动提示样式
+.swipe-hint {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 14px;
+  z-index: 100;
+  animation: swipe-hint-animation 2s infinite;
+}
+
+@keyframes swipe-hint-animation {
+  0%, 100% {
+    opacity: 0.6;
+    transform: translateX(-50%) translateY(0);
+  }
+  50% {
+    opacity: 1;
+    transform: translateX(-50%) translateY(-10px);
+  }
+}
+
+// 添加滑动提示文本
+body::after {
+  content: "← 左右滑动浏览 →";
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 14px;
+  z-index: 100;
+  animation: swipe-hint-animation 2s infinite;
+}
+
+// 优化移动端显示
+@media (max-width: 768px) {
+  body {
+    overflow-x: auto;
+  }
+  
+  .post-block {
+    margin: 0 -10px;
+    border-radius: 0;
+  }
+  
+  body::after {
+    font-size: 12px;
+    bottom: 10px;
+  }
 }

@@ -14,60 +14,6 @@
         </a>
       </li>
     {%- endif %}
-
-    {%- if theme.lightdark.enable %}
-      <!-- 主题切换按钮 - 小图标样式 -->
-      <li class="menu-item menu-item-theme-toggle">
-        <a role="button" class="theme-toggle theme-toggle-icon" id="theme-toggle" title="切换主题">
-          <i class="fa fa-moon-o fa-fw"></i>
-        </a>
-      </li>
-
-      <script>
-        document.addEventListener('DOMContentLoaded', function() {
-          const themeToggle = document.getElementById('theme-toggle');
-          if (!themeToggle) return;
-          
-          const themeToggleIcon = themeToggle.querySelector('i');
-          
-          // 初始化主题
-          function initTheme() {
-            const savedTheme = localStorage.getItem('theme');
-            const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-            
-            if (savedTheme === 'dark' || (!savedTheme && prefersDark)) {
-              document.documentElement.classList.add('dark-theme');
-              themeToggleIcon.className = 'fa fa-sun-o fa-fw';
-            } else {
-              document.documentElement.classList.remove('dark-theme');
-              themeToggleIcon.className = 'fa fa-moon-o fa-fw';
-            }
-          }
-          
-          // 切换主题
-          function toggleTheme() {
-            const isDark = document.documentElement.classList.toggle('dark-theme');
-            
-            if (isDark) {
-              localStorage.setItem('theme', 'dark');
-              themeToggleIcon.className = 'fa fa-sun-o fa-fw';
-            } else {
-              localStorage.setItem('theme', 'light');
-              themeToggleIcon.className = 'fa fa-moon-o fa-fw';
-            }
-          }
-          
-          // 监听系统主题变化
-          window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', initTheme);
-          
-          // 添加点击事件
-          themeToggle.addEventListener('click', toggleTheme);
-          
-          // 初始化
-          initTheme();
-        });
-      </script>
-    {%- endif %}
   </ul>
 </nav>
 {%- endif %}
